@@ -21,7 +21,5 @@ echo "[django] confd is now monitoring etcd for changes..."
 
 # Start the Django service using the generated config
 echo "[django] starting django service..."
-supervisorctl start django
-
-# Follow the logs to allow the script to continue running
-tail -f /var/log/supervisor*.log
+cd /app
+gunicorn app.wsgi:application -b 0.0.0.0:8000
