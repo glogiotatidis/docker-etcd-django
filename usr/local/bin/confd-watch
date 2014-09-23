@@ -23,6 +23,5 @@ echo "[django] confd is now monitoring etcd for changes..."
 echo "[django] starting django service..."
 cd /app
 
-. .env
 python manage.py syncdb --noinput
 gunicorn app.wsgi:application -b 0.0.0.0:8000
