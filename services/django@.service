@@ -5,10 +5,10 @@ Description=Django service on port %i
 Requires=etcd.service
 Requires=docker.service
 Requires=django-discovery@%i.service
-Requires=postgres@*.service
+Requires=postgres.service
 
 # Dependency ordering
-After=postgres@*.service
+After=postgres.service
 After=etcd.service
 After=docker.service
 Before=django-discovery@%i.service
