@@ -2,3 +2,5 @@ Django==1.7
 gunicorn
 dj_database_url
 django-dotenv
+psycopg2==2.5.2
+
