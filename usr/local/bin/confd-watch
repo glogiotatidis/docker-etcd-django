@@ -24,4 +24,4 @@ echo "[django] starting django service..."
 cd /app
 
 python manage.py syncdb --noinput
-gunicorn app.wsgi:application -b 0.0.0.0:8000
+gunicorn app.wsgi:application -b 0.0.0.0:8000 --workers 1
