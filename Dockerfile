@@ -10,5 +10,4 @@ ADD app/ /app
 ADD etc/ /etc
 ADD usr/ /usr
 
-
 RUN pip install -r /app/requirements.txt
